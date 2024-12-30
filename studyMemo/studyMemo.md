@@ -31,15 +31,17 @@
     - eventオブジェクト.stopPropagationを使うと止めることができる。
 
 #### 2024/12/30
-**非同期のjavascript**
-- javascriptのPromise
-  - 
-- async[コード](../studyJavaScript/20241230/app.js)
+- 非同期処理とは、長く続く可能性があるタスクを開始しても、そのタスクが完了するのを待つのではなく、そのタスクの実行中も他のタスクに応答できるようにする技術。
+**非同期処理を実現するjavascript**
+- Promise
+  - 非同期処理の最終的な完了、もしくは失敗を表すオブジェクト
+- asyncとawait[コード](../studyJavaScript/20241230/app.js)
   - promiseよりスッキリと非同期処理がかける。
-  - 関数の前に「async」をつけると、promiseを返してくれる。
-  - async関数から値がreturnされるとresolveになり、エラーがthrowされた場合はそのpromiseはrejectされる。
-- await
-  - async関数の中でしか使えない。
-  - promiseを返す関数からresolveまたはrejectされるのを待ってくれる。
-  - promiseの時はthenを使い、コールバック関数の中に処理を書いていたが、awaitを先頭につけるだけで同じ処理を実現することができる。
-  - awaitで返ってきたresolveの値を変数に入れることができる。
+  - async
+    - 関数の前に「async」をつけると、promiseを返してくれる。
+    - async関数から値がreturnされるとresolveになり、エラーがthrowされた場合はそのpromiseはrejectされる。
+  - await
+    - async関数の中でしか使えない。
+    - promiseを返す関数からresolveまたはrejectされるのを待ってくれる。
+    - promiseの時はthenを使い、コールバック関数の中に処理を書いていたが、awaitを先頭につけるだけで同じ処理を実現することができる。
+    - awaitで返ってきたresolveの値を変数に入れることができる。
