@@ -10,5 +10,8 @@
 - 要素のスタイルを操作：要素.style.color = 'purple'/要素.style.backgroundColor = 'red'　
   - キャメルケースでスタイルを指定。
 
-##### 今日かいたコード
-
+#### 2024/12/27
+- DOMイベント
+  - インラインイベント　→ html要素内に直接イベントをかく　例）<button onclick="alert('クリック！')"></button>
+    - インラインイベントは同じイベントを使いたい時に使い回せない。
+  - addEventListener('イベント', function(){})はコールバック関数を引数に渡せるので、使い回し◎
