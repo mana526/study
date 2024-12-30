@@ -30,7 +30,16 @@
     - 親子関係にある要素で、子の要素にイベントを設定して、親にも設定している場合、子要素のイベントが発火した後に勝手に親要素のイベントも発火する現象。
     - eventオブジェクト.stopPropagationを使うと止めることができる。
 
-#### 2024/12/29
-**Vueの勉強①(chap01~)**
-- chap01
+#### 2024/12/30
+**非同期のjavascript**
+- javascriptのPromise
   - 
+- async[コード](../studyJavaScript/20241230/app.js)
+  - promiseよりスッキリと非同期処理がかける。
+  - 関数の前に「async」をつけると、promiseを返してくれる。
+  - async関数から値がreturnされるとresolveになり、エラーがthrowされた場合はそのpromiseはrejectされる。
+- await
+  - async関数の中でしか使えない。
+  - promiseを返す関数からresolveまたはrejectされるのを待ってくれる。
+  - promiseの時はthenを使い、コールバック関数の中に処理を書いていたが、awaitを先頭につけるだけで同じ処理を実現することができる。
+  - awaitで返ってきたresolveの値を変数に入れることができる。
